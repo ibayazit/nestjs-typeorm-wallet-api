@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "710cd821-84d0-4dc8-beae-27884d6c120e",
+		"name": "NestJS-TypeORM Wallet App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Currency - NO AUTH",
+			"item": [
+				{
+					"name": "Get Currencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/currencies",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"currencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Currency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/currencies/5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"currencies",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Currency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "GBP",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "England Pound",
+									"type": "default"
+								},
+								{
+									"key": "buying_rate",
+									"value": "23.77",
+									"type": "default"
+								},
+								{
+									"key": "selling_rate",
+									"value": "23.77",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/currencies",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"currencies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Currency",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "TRY",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "EURO",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "buying_rate",
+									"value": "0.6",
+									"type": "default"
+								},
+								{
+									"key": "selling_rate",
+									"value": "0.4",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/currencies/5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"currencies",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Currency",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/currencies/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"currencies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User - NO AUTH",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/19",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "ibrahim",
+									"type": "default"
+								},
+								{
+									"key": "last_name",
+									"value": "bayazit",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "ibrbayazit@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "ibrahim",
+									"type": "default"
+								},
+								{
+									"key": "last_name",
+									"value": "bayazit updated",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "ibrbayazit@gmail.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/users/19",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "ibrahim",
+									"type": "default"
+								},
+								{
+									"key": "last_name",
+									"value": "bayazit",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "ibrbayazit@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ibrbayazit@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "User Wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/wallet",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deposit Wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currency_id",
+									"value": "4",
+									"type": "default"
+								},
+								{
+									"key": "amount",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/wallet/deposit",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wallet",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Withdraw Wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currency_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "amount",
+									"value": "344.45",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/wallet/withdraw",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wallet",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Exchange Currency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "from_currency_id",
+									"value": "4",
+									"type": "default"
+								},
+								{
+									"key": "to_currency_id",
+									"value": "3",
+									"type": "default"
+								},
+								{
+									"key": "amount",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/wallet/exchange",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wallet",
+								"exchange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/wallet/processlog",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"wallet",
+								"processlog"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000/api",
+			"type": "default"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImZpcnN0X25hbWUiOiJpYnJhaGltIiwibGFzdF9uYW1lIjoiYmF5YXppdCB1cGRhdGVkIiwiZW1haWwiOiJpYnJiYXlheml0QGdtYWlsLmNvbSIsImlhdCI6MTY4MDM2MDI2NywiZXhwIjoxNjgwNDQ2NjY3fQ.MAtGMY9me__m3Z918nqyM4qyi-QcfBoS3WkdXt-s6u0",
+			"type": "default"
+		}
+	]
+}
